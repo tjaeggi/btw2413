@@ -1,0 +1,139 @@
+site_name: WING - btw2413-IoT Applications
+site_url: https://tjaeggi.github.io/btw2413/
+theme:
+  name: material
+  font:
+    # text: Roboto
+    # text: Open Sans
+    # text: Noto Sans
+    # code: Red Hat Mono
+    # code: Noto Mono
+    # code: Ubuntu Mono
+    text: Nunito
+    code: Roboto Mono
+  logo:  assets/LearningServicesLogo.png
+  favicon: assets/LearningServicesLogo.png
+  #icon:
+  #  logo: fontawesome/solid/face-smile-beam
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: light blue
+      accent: deep orange
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: light blue
+      accent: deep orange
+  features:
+    - navigation.footer
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+
+plugins:
+  - glightbox
+  - search
+  - enumerate-headings:
+      enabled: false
+      toc_depth: 6
+      strict: true
+
+  - exporter:
+      logging:
+        level: debug
+      formats:
+        pdf:
+          explicit: true
+          concurrency: 16
+          stylesheets:
+            - resources/stylesheets/pdf.scss
+          #covers:
+          #  front: resources/templates/covers/front.html.j2
+          #  back: resources/templates/covers/back.html.j2
+          browser:
+            debug: false
+          aggregator:
+            #enabled: !ENV [MKDOCS_EXPORTER_PDF_AGGREGATOR, true ]
+            enabled: false
+            output: documentation.pdf
+            covers: front
+      buttons:
+        - title: View as PDF
+          icon: material-file-move-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes:
+            target: _blank
+            href: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.href
+        - title: Download as PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
+ 
+extra:
+  social:
+    - icon: simple/linkedin
+      link: https://www.linkedin.com/in/thomas-j%C3%A4ggi-026350141/
+
+copyright:  2024 &copy; Thomas Jäggi, Berne University of Applied Sciences - Berner Fachhochschule - BFH
+
+markdown_extensions:
+  - def_list
+  - attr_list
+  - tables
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.keys
+  - pymdownx.critic
+
+
+extra_css:
+  - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+exclude_docs: |
+  spick/installationsjournal.md
+  spick/spick_markdown.md
+
+nav:
+  - 'ABOUT THIS WEBSITE': index.md
+  - 'TIG Stack Installation': 
+      - le04/README.md
+      - 'Installtion TIG-Stack': le04/tig-stack-install.md
+      

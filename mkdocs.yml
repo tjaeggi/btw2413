@@ -83,7 +83,7 @@ plugins:
           attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
  
 #extra:
-#  social:
+#  social: 
 #    - icon: simple/linkedin
 #      link: https://www.linkedin.com/in/thomas-j%C3%A4ggi-026350141/
 

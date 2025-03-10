@@ -389,4 +389,8 @@ Paste the copied Flux code into the query editor.
 Configure visualization options as needed and click "Apply" to save the panel configuration.
 
 
-[see here](https://github.com/vasilogi/iot-dashboard-mqtt-telegraf-influxdb-grafana?tab=readme-ov-file#set-up-the-monitoring-stack-mosquitto-telegraf-influxdb-grafana-).
+
+
+
+[see also here](https://github.com/vasilogi/iot-dashboard-mqtt-telegraf-influxdb-grafana?tab=readme-ov-file#set-up-the-monitoring-stack-mosquitto-telegraf-influxdb-grafana-){:target="_blank"}
+

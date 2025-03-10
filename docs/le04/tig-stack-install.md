@@ -1,4 +1,4 @@
-# Welcome 
+# Installing TIG-Stack
 
 
 <figure markdown="span">
@@ -13,3 +13,8 @@ TIG:
 **I** - InfluxDB
 
 **G** - Grafana
+
+## First Step
+Be sure your ESP32 is publishing sensor-data to the MQTT-Broker. Check it with MQTT-Explorer.
+
+

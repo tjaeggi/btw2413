@@ -82,10 +82,10 @@ plugins:
           enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
           attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
  
-extra:
-  social:
-    - icon: simple/linkedin
-      link: https://www.linkedin.com/in/thomas-j%C3%A4ggi-026350141/
+#extra:
+#  social:
+#    - icon: simple/linkedin
+#      link: https://www.linkedin.com/in/thomas-j%C3%A4ggi-026350141/
 
 copyright:  2024 &copy; Thomas Jäggi, Berne University of Applied Sciences - Berner Fachhochschule - BFH
 

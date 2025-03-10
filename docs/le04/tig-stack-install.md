@@ -8,7 +8,7 @@
 
 TIG:
 
-**T** - Telegraf.
+**T** - Telegraf
 
 **I** - InfluxDB
 
